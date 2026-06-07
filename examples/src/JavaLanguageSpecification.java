@@ -43,5 +43,9 @@ public class JavaLanguageSpecification {
     // The main method doesn't return an exit code.
     // The static functions are different, in Java, static doesn't operate any object (again).
 
+    public static void main2(String[] args) {
+        System.out.println(); // Doens't need to break a line, it will output after the string.
+    }
+
 }
 
