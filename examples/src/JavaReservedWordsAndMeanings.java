@@ -183,5 +183,40 @@ public class JavaReservedWordsAndMeanings {
                 super(); // Targets and calls constructor methods or fields inside the parent
             }
         }
+
+        /*
+            Exception Handling and Testing
+        */
+        public void testint() throws Exception { // Throws Lists out exceptions a method might potentially fire into its calling chain
+            try { // Wraps an isolated block of code to watch for potential internal exceptions
+
+            } catch (Exception ex) { // Traps and processes a specific exception thrown by a companion try block
+                assert(false == true); // Tests conditional logic assumptions during code debugging
+            } finally //Guaranteesa critical code block runs immediately afeter handling
+            {
+                throw new Exception(); // Fires an explicity instance of an exception error directly out of code logic
+            }
+        }
+
+        /*
+            Unused Keywords
+
+            const Reserved for potential future constant definitions (use final instead)
+            goto Reserved to prevent accidental layout of unmaintainable, jumping spaghetti code
+
+            Reserved Literals
+
+            true: A literal representation of a positivo boolean evaluation
+            false: A literal representation of a negative boolean evaluation
+            null: A literal reference stating that an object variable points to empty
+
+            Contextual Keywords
+
+            var, record, sealed, permits, yield, module and requires.
+
+            These act as restricted keywords only in specific structural locations - for example, when defining a local variable data type or a module path.
+
+        */
+
     }
 }
