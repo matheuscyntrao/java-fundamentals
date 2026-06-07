@@ -50,7 +50,7 @@ public class JavaReservedWordsAndMeanings {
 
     abstract static class something {} // Flags a class that cannot be directly instantiated, or a method without code;
     final int test = 1; // Makes a variable unchangeable a method up-overrideable or a class un-extandable;
-    static String hostname = ""; // Ties a member directly to the class blueprint rather than indivicual oject instances
+    static String hostname = ""; // Ties a member directly to the class blueprint rather than individual oject instances
 
     // Syncronized locks code block between multiple threads.
     static class SyncronizedMethod {
