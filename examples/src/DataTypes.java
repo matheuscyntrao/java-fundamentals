@@ -3,7 +3,7 @@ import java.math.BigDecimal;
 public class DataTypes {
 
     // Java is strongly typed, every variable must have a type declared.
-    // Java has an arbitraty-precision aritchmetic package, but "Big Numbers" os char sequence are Java Objects and not a primitive Java type.
+    // Java has an arbitrary-precision arithmetic package, but "Big Numbers" os char sequence are Java Objects and not a primitive Java type.
 
     // Integer type
 
