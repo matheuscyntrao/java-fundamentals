@@ -16,4 +16,27 @@ public class JavaLanguageSpecification {
        (this is from a Sun engineers, but it is my opinion as well haha).
 
      */
+
+    public class ClassName {
+        public static void main(String[] args) {
+            System.out.println("Hello, World!");
+        }
+    }
+
+    // Since Java 5
+    public static void main(String... args){
+
+    }
+
+    // Since Java 21
+    void main() {
+        System.out.println("Hello, World!");
+    }
+
+    class Hello {
+        void main() {
+            System.out.println("Hello");
+        }
+    }
 }
+
