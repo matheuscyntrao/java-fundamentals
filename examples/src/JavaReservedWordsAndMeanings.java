@@ -187,7 +187,7 @@ public class JavaReservedWordsAndMeanings {
         /*
             Exception Handling and Testing
         */
-        public void testint() throws Exception { // Throws Lists out exceptions a method might potentially fire into its calling chain
+        public void testing() throws Exception { // Throws Lists out exceptions a method might potentially fire into its calling chain
             try { // Wraps an isolated block of code to watch for potential internal exceptions
 
             } catch (Exception ex) { // Traps and processes a specific exception thrown by a companion try block
