@@ -35,8 +35,13 @@ public class JavaLanguageSpecification {
 
     class Hello {
         void main() {
-            System.out.println("Hello");
+            System.out.println("Hello"); // After
         }
     }
+
+    // One difference of C++ and Java is ALL functions are methods of a class.
+    // The main method doesn't return an exit code.
+    // The static functions are different, in Java, static doesn't operate any object (again).
+
 }
 
