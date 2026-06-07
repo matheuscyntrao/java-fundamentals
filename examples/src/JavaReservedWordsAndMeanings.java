@@ -93,7 +93,7 @@ public class JavaReservedWordsAndMeanings {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        SyncronizedMethod counter = new SyncronizedMethod();
+        SynchronizedMethod counter = new SynchronizedMethod();
 
         Thread t1 = new Thread(() -> {
             for (int i = 0; i < 10000; i++) {
