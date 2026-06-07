@@ -36,7 +36,7 @@ public class DataTypes {
         Understanding IEEE 754 helps explain why floating-point calculations sometimes produce results that look unexpected.
      */
 
-    static void main() {
+    static void main(String[] args) {
 
         double x = 1.0 / 0.0;
         System.out.println(x);
@@ -82,6 +82,54 @@ public class DataTypes {
         BigDecimal result = a.subtract(b);
 
         System.out.println(result);
+
+        // The char type
+        // Unicode characters or individual characters are represented by a char. Some unicodes need two chat values to be represented.
+        // They are enclosed by single quotes. 'A' is diffent "A".
+        // They also can be expressed by hexadecimal values starting from \u0000 to \uffff.
+        for (int i = 0x0000; i <= 0xFFFF; i++) {
+            String hexExpr = String.format("\\u%04X", i);
+            char caractere = (char) i;
+            if (Character.isISOControl(caractere)) {
+                System.out.println(hexExpr + " -> [Caractere de Controle / Invisível]");
+            } else {
+                System.out.println(hexExpr + " -> " + caractere);
+            }
+        }
+
+        // Unicode escape sequences are processed before the code is pased.
+        // For example "\u0022+\u0022" is not a string consisting of a plus sign. Intead, are converted into '+' = "
+
+        // Backspace \u0008
+        // Tab \u0009
+        // Linefeed \u000a
+        // Carriage return \u000d
+        // Double quote \u0022
+        // Single quote \u0027
+        // Backslash \u005c
+
+        // Complementing studying of Unicode Encoding Scheme
+        /*
+            ASCII
+            ISO 8859-1 Western European
+            KOI-8 for Russian
+            GB18030 and BIG-5 for Chinese
+            etc...
+
+            Almost 65,536 code values.
+            Java uses 16-bit Unicode Characters (double as some other languages), today is not enought anymore because the growing of Chinese, Japanese and Korean.
+            In Java 5 introduces code point as a code value that is associated with a characted in an encoding scheme.
+            U+0041 -> group 17 code planes
+            basic multilingual plane, code U+10000 to U+10FFFF, hold the supplementary characters.
+
+            UTF-16 encoding represents all Unicode code points in a variale-length code.
+            Code Units -> each of the values in such an encoding pair falls into a range of 2048 unused values of the basic multilingual plane (sorrogates area (U+D800 to U+DBFF for the first, U+DC00 to U+DFFF for the second code unit)).
+
+            https://math.ucr.edu/home/baez/octonions
+            https://tools.ietf.org/html/rfc2781 for a description of the encoding alrorithm
+
+         */
+
 
     }
 
