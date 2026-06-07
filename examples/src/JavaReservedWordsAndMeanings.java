@@ -31,7 +31,7 @@ public class JavaReservedWordsAndMeanings {
             default: // Handles unmatched values inside a switch statement
             break;
         }
-        for(int i=0; i < 10; i++) {} // Initiates an interative loop with variable inicialization, a condition and updates.
+        for(int i=0; i < 10; i++) {} // Initiates an interactive loop with variable initialization, a condition and updates.
         do { // Executes a block at least once before evaluating a loop condition
         } while(true != false); // Keeps executing a block as long as its condition stays true
         // return // Exits a method and can optionally pass a value back to the caller
@@ -41,7 +41,7 @@ public class JavaReservedWordsAndMeanings {
         Access Modifiers
     */
     public void setsAccessibilityToCompletelyOpenAcrossTheEntireProgram() {};
-    private void restrictsAccessibilityExclusivelyToTheClassThatsOwnIt() {};
+    private void restrictsAccessibilityExclusivelyToTheClassThatOwnIt() {};
     protected void restrictsVisibilityToTheSamePackageAndSubclasses(){};
 
     /*
@@ -49,11 +49,11 @@ public class JavaReservedWordsAndMeanings {
     */
 
     abstract static class something {} // Flags a class that cannot be directly instantiated, or a method without code;
-    final int test = 1; // Makes a variable unchangeable a method up-overrideable or a class un-extandable;
-    static String hostname = ""; // Ties a member directly to the class blueprint rather than individual oject instances
+    final int test = 1; // Makes a variable unchangeable a method up-overrideable or a class un-extendable;
+    static String hostname = ""; // Ties a member directly to the class blueprint rather than individual object instances
 
-    // Syncronized locks code block between multiple threads.
-    static class SyncronizedMethod {
+    // Synchronized locks code block between multiple threads.
+    static class SynchronizedMethod {
         private int count = 0;
 
         public synchronized void increment() {
@@ -65,7 +65,7 @@ public class JavaReservedWordsAndMeanings {
         }
     }
 
-    static class SinchronizedBlock {
+    static class SynchronizedBlock {
         private int count = 0;
         private final Object lock = new Object();
 
@@ -80,7 +80,7 @@ public class JavaReservedWordsAndMeanings {
         }
     }
 
-    static class MultipleThreadsUsingSyncronizedMethod {
+    static class MultipleThreadsUsingSynchronizedMethod {
         private int count = 0;
 
         public synchronized void increment() {
@@ -161,9 +161,9 @@ public class JavaReservedWordsAndMeanings {
     public interface ISomething {} // Declares a contract of methods that classes must fulfill
     public enum PredefinedUnchangingValues {} // Declares a constant group of pre-defined, unchanging values
     public class SomethingTwo implements ISomething {} // Forces a class to implement specific interface architectures
-    //package // Groups relative setsof classes and interface into distinct namespaces
-    //import // Brings external packages or classes cleany into current code scope
-    Something smt = new Something(); // Allocates memory dinamicallyto create a brand-new instance of an object.
+    //package // Groups relative sets of classes and interface into distinct namespaces
+    //import // Brings external packages or classes into current code scope
+    Something smt = new Something(); // Allocates memory aerodynamically create a brand-new instance of an object.
 
     public void getInstanceOf() { // Compare an active object against a specific target class type
         System.out.println(smt instanceof ISomething);
@@ -192,9 +192,9 @@ public class JavaReservedWordsAndMeanings {
 
             } catch (Exception ex) { // Traps and processes a specific exception thrown by a companion try block
                 assert(false == true); // Tests conditional logic assumptions during code debugging
-            } finally //Guaranteesa critical code block runs immediately afeter handling
+            } finally //Guarantees critical code block runs immediately after handling
             {
-                throw new Exception(); // Fires an explicity instance of an exception error directly out of code logic
+                throw new Exception(); // Fires an explicit instance of an exception error directly out of code logic
             }
         }
 
