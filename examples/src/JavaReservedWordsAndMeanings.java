@@ -151,4 +151,37 @@ public class JavaReservedWordsAndMeanings {
             return a / b;
         }
     }
+
+
+    /*
+        Classes, Interfaces and Object Relationship
+     */
+
+    public class Something {} // Declares a brand-new blueprint type for creating objects
+    public interface ISomething {} // Declares a contract of methods that classes must fulfill
+    public enum PredefinedUnchangingValues {} // Declares a constant group of pre-defined, unchanging values
+    public class SomethingTwo implements ISomething {} // Forces a class to implement specific interface architectures
+    //package // Groups relative setsof classes and interface into distinct namespaces
+    //import // Brings external packages or classes cleany into current code scope
+    Something smt = new Something(); // Allocates memory dinamicallyto create a brand-new instance of an object.
+
+    public void getInstanceOf() { // Compare an active object against a specific target class type
+        System.out.println(smt instanceof ISomething);
+    }
+
+    public class ThisObject extends Something {
+
+        private String name;
+
+        public void test() {
+            if (this.name.equals("TestName")); // This, refers explicity to the specific instance of object currently executing.
+        }
+
+        public class SuperTest extends Something {
+
+            public SuperTest(){
+                super(); // Targets and calls constructor methods or fields inside the parent
+            }
+        }
+    }
 }
