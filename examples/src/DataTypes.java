@@ -130,9 +130,12 @@ public class DataTypes {
 
          */
 
-
     }
 
+    // Boolean Type
+    // You cannot convert integers to boolean types, another difference from C++
+    boolean x = true;
+    boolean y = false;
 
 
 
