@@ -41,7 +41,48 @@ public class VariablesAndConstants {
 
 
 
+    }
+
+
+    // Constants
+
+    public class Constants {
+
+        public static void main(String[] args) {
+            final double CM_PER_INCH = 2.54; // Always use final instead const, is a java reserved word
+            double paperWidth = 8.5;
+            double paperHeight = 11;
+            System.out.println("Paper size in centimeters: " +
+                    paperWidth * CM_PER_INCH + " by " + paperHeight * CM_PER_INCH);
+        }
 
     }
 
+    public class Constants2 {
+
+        public static final double CM_PER_INCH = 2.54; // Also can be acessable from other methods outside of this class
+
+        static void main() {
+            double paperWidth = 8.5;
+            double paperHeight = 11;
+            System.out.printf("Paper size in centimeters: " +
+                    paperWidth * CM_PER_INCH + " by " + paperHeight * CM_PER_INCH);
+        }
+
+    }
+
+    // Many Intel processors compute x * y, leave the result in 80-it register, then divide by z, and finally truncate the result back to 64 bits. It can avoid exponent overflow.
+    // But the result may be different from a computation that uses 64 bits throughout.
+
+    // The initial specification of the Java virtual machine mandated that all intermediate computations must be truncated.
+
+    // This is slower than the more precise computations because the truncation operations take time.
+
+    // Java was updated  to recognize the conflicting demands for optimum performance and perfect reproducibility.
+
+    // strictfp = this is default after java 17+, but we can also declare in earliest versions of java.
+
+
 }
+
+
