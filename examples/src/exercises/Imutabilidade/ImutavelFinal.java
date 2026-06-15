@@ -28,9 +28,7 @@ public final class ImutavelFinal {
         return nomeImutavel;
     }
 
-    // CORREÇÃO NA SAÍDA: Nunca retorne a referência direta da sua lista interna
     public List<String> getListaColecaoImutavel() {
-        // Retornamos uma casca modificável que lança UnsupportedOperationException se tentarem alterar
         return Collections.unmodifiableList(this.listaColecaoImutavel);
     }
 
