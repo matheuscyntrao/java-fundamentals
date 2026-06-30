@@ -88,7 +88,7 @@ public class DataTypes {
         // They are enclosed by single quotes. 'A' is diffent "A".
         // They also can be expressed by hexadecimal values starting from \u0000 to \uffff.
         for (int i = 0x0000; i <= 0xFFFF; i++) {
-            String hexExpr = String.format("\\u%04X", i);
+            java.lang.String hexExpr = java.lang.String.format("\\u%04X", i);
             char caractere = (char) i;
             if (Character.isISOControl(caractere)) {
                 System.out.println(hexExpr + " -> [Caractere de Controle / Invisível]");

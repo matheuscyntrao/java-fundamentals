@@ -35,6 +35,29 @@ public class String {
         java.lang.String all = java.lang.String.join(" / ", "A", "B", "C", "D");
         System.out.println(all);
 
+        // Strings Are Immutable, if you need to change value, you can use concatenate to work around.
+        java.lang.String greeting = rating.substring(0,1) + "p!";
+        System.out.println(greeting);
+        // Isn't efficient if you see need to change the value all the time, you can use substring to create new String
+        // But the real benefit is the new String using replace or substring for example, use the same Character points to the same location.
+        // The designers of Java decided the efficiency of sharing outweights the inneficiency of string editing (Memory Heap cost is cheaper)
+
+        // C++ Notes
+
+        /*
+
+        char greeting[] = "Hello";
+        char* greeting = "Hello";
+        char* temp= malloc(6);
+        strncpy(temp, greeting 3);
+        strncpy(temp + 3, "p!", 3);
+        greeting = temp;
+        greeting = "Howdy";
+
+        The original string was allocated on the heap.
+        Even java doing garbage collection automatic, String share the Characters to avoid peaks of Heap Memory.
+
+        */
     }
 
 }

@@ -1,3 +1,5 @@
+import java.lang.String;
+
 void main() {
 
     // Takes the square root of a number

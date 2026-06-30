@@ -1,4 +1,5 @@
 import java.io.Serializable;
+import java.lang.String;
 
 public class JavaReservedWordsAndMeanings {
 
