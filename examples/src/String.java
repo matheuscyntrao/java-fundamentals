@@ -58,6 +58,37 @@ public class String {
         Even java doing garbage collection automatic, String share the Characters to avoid peaks of Heap Memory.
 
         */
+
+        /* Equality Tests */
+        java.lang.String s = "Some string";
+        java.lang.String b = "Other String";
+
+        s.equals(b); // Correct way to test strings
+        s.equalsIgnoreCase(b);
+
+        if(s == "Some string"); // Same location
+        System.out.println(true);
+        if(b.substring(0,3) == "Oth") // Same location
+            System.out.println(true);
+        else
+            System.out.println(false);
+        if("literalString".equals("Something literal or variable"))
+            System.out.println("Literal Comparision");
+
+        // JVM always arranges for equal string to be shared
+
+        s = "";
+        if(s.equals("") && s != null && string.length() != 0){
+            System.out.println("Empty string");
+        }
+
+
+
+
+
+
+
+
     }
 
 }
