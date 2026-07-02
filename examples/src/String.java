@@ -82,6 +82,22 @@ public class String {
             System.out.println("Empty string");
         }
 
+        // Code points and Code Units
+        // The char type is a code unit for representing Unicode points in the UTF-16 encoding.
+        // As we already see, some char needs a pair of Unicode to represent one Char
+
+        java.lang.String test = "Hello";
+        int n = test.length(); // Count of Char
+        int cpCount  = greeting.codePointCount(0, test.length());
+        char first = test.charAt(0);
+        char last = test.charAt(test.length()-1);
+        int offsetOfChar = 0;
+        int index = test.offsetByCodePoints(0, offsetOfChar);
+        int cp = test.codePointAt(index);
+
+        // Do not use char type in your programs.
+
+
 
 
 
