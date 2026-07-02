@@ -97,6 +97,19 @@ public class String {
 
         // Do not use char type in your programs.
 
+        // Move backwords statement to check code points
+
+        java.lang.String sentence = "Some sencente maybe with emojis?";
+        int index2 = 1;
+        int cp2 = sentence.codePointAt(index);
+        if (Character.isSupplementaryCodePoint(cp2))
+            index2 += 2;
+        else index2++;
+
+        // It's quite painful, the correct way to do that is turns the sentence into a stream into an array of int (codepoints)
+        int[] codePoints = sentence.codePoints().toArray();
+        java.lang.String str = new java.lang.String(codePoints, 0, codePoints.length);
+
 
 
 
