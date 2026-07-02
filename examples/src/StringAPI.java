@@ -29,8 +29,27 @@ public class StringAPI {
         System.out.println(result.endsWith("Suffix"));
         System.out.println(result.indexOf("A"));
         System.out.println(result.indexOf("Str",0));
-        System.out.printf(String.valueOf(result.indexOf(1)));
-        System.out.println(String.valueOf(result.indexOf(0,0)));
+        System.out.println(String.valueOf(result.indexOf(1)));
+        System.out.println(result.indexOf(0,0));
+        System.out.println(result.lastIndexOf("A"));
+        System.out.println(result.lastIndexOf("A",2));
+        System.out.println(result.lastIndexOf(0));
+        System.out.println(result.lastIndexOf(0,0));
+        System.out.println(result.length());
+        System.out.println(result.codePointCount(0, 10));
+        StringBuilder newStringBuilder = new StringBuilder(result.replace("old", "new"));
+        String newString = result.replace("old","new");
+        System.out.println(result.substring(4));
+        System.out.println(result.substring(4,6));
+        System.out.println(result.toLowerCase());
+        System.out.println(result.toUpperCase());
+        System.out.println(result.trim());
+        System.out.println(result.strip());
+        System.out.println(String.join(result, "b"));
+        System.out.println(result.repeat(10));
+
+
+
 
     }
 
