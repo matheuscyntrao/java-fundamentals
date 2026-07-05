@@ -1,3 +1,4 @@
+import javax.print.DocFlavor;
 import java.lang.String;
 import java.util.stream.IntStream;
 
@@ -48,6 +49,27 @@ public class StringAPI {
         System.out.println(String.join(result, "b"));
         System.out.println(result.repeat(10));
 
+        /*
+        http://docs.oracle.com/javase/9/docs/api (access through browser to check other version)
+        DocFlavor.STRING;
+        com.sun.jdi.connect.Connector.StringArgument;
+        javafx.eans.binding.StringBinding;
+        java.lang.StringBuffer;
+        java.io.StringBufferInputStream;
+        java.lang.StringBuilder;
+        java.text.StringCharacterIterator;
+        java.lang.invoke.StringConcatFactory;
+        javafx.beans.binding.When.StringConditionBuilder;
+        javax.swing.text.StringContent;
+        javafx.util.StringConverter;
+        javafx.css.converter.StringConverter;
+        javafx.beans.binding.StringExpression;
+        org.omg.CORBA.StringHolder;
+        java.lang.StringIndexOutOfBoundsException;
+
+        ... and a lot more haha
+
+         */
 
 
 
