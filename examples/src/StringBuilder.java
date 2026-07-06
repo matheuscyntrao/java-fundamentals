@@ -1,3 +1,6 @@
+import java.lang.String;
+import java.util.Scanner;
+
 public class StringBuilder {
 
     static void main() {
@@ -15,6 +18,16 @@ public class StringBuilder {
         sb.insert(4,"A partir do 4 caracter");
         sb.delete(4,6);
         System.out.println(sb);
+
+        // Input and Output
+        // We can use GUI to receive some input, or also as we see today as html pages, apis or microservices.
+        // Reading Inputs with Scanner
+        Scanner in = new Scanner(System.in);
+        System.out.println("What is your name?");
+        String name = in.nextLine();
+        String firstName = in.next();
+        System.out.println("How old are you?");
+        int age = in.nextInt();
 
     }
 
