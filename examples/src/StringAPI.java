@@ -38,7 +38,7 @@ public class StringAPI {
         System.out.println(result.lastIndexOf(0,0));
         System.out.println(result.length());
         System.out.println(result.codePointCount(0, 10));
-        StringBuilder newStringBuilder = new StringBuilder(result.replace("old", "new"));
+        java.lang.StringBuilder newStringBuilder = new java.lang.StringBuilder(result.replace("old", "new"));
         String newString = result.replace("old","new");
         System.out.println(result.substring(4));
         System.out.println(result.substring(4,6));
@@ -68,6 +68,8 @@ public class StringAPI {
         java.lang.StringIndexOutOfBoundsException;
 
         ... and a lot more haha
+
+
 
          */
 
