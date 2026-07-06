@@ -1,3 +1,4 @@
+import java.io.Console;
 import java.lang.String;
 import java.util.Scanner;
 
@@ -28,6 +29,22 @@ public class StringBuilder {
         String firstName = in.next();
         System.out.println("How old are you?");
         int age = in.nextInt();
+
+        Console cons = System.console();
+        String username = cons.readLine("User name:");
+        char[]  passwd = cons.readPassword("Password:");
+
+        System.out.println(in.hasNext());
+        System.out.println(in.hasNextByte());
+        System.out.println(in.hasNextBigDecimal());
+        System.out.println(in.hasNextBigInteger());
+        System.out.println(in.hasNextBoolean());
+        System.out.println(in.hasNextDouble());
+        System.out.println(in.hasNextFloat());
+        System.out.println(in.useRadix(1));
+        System.out.println(in.findAll("A"));
+        System.out.println(in.findInLine("Line"));
+        System.out.println(in.findWithinHorizon("[A-a]", 1));
 
     }
 
