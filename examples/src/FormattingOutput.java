@@ -24,5 +24,12 @@ public class FormattingOutput {
         System.out.printf("%c - Character\n", 'a');
         System.out.printf("%b - Boolean\n", true);
         System.out.printf("%h - Hash Code\n", "42628b2");
+
+        System.out.printf("%1$d %1$d", 42);
+        System.out.printf("%d %<d", 42);
+        System.out.printf("%#o", 26);
+        System.out.printf("%#f", 26f);
+        System.out.printf("%S", "texto");
+        System.out.printf("%b", null);
     }
 }
