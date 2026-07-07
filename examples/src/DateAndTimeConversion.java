@@ -25,6 +25,17 @@ public class DateAndTimeConversion {
         System.out.printf("%td\n", dataHora);
         System.out.printf("%te\n", dataHora);
         System.out.printf("%tA\n", dataHora);
+        System.out.printf("%ta\n", dataHora);
+        System.out.printf("%tj\n", dataHora);
+        System.out.printf("%tH\n", dataHora);
+        System.out.printf("%tk\n", dataHora);
+        System.out.printf("%tI\n", dataHora);
+        System.out.printf("%tl\n", dataHora);
+        System.out.printf("%tM\n", dataHora);
+        System.out.printf("%tS\n", dataHora);
+        System.out.printf("%tL\n", dataHora);
+        System.out.printf("%tN\n", dataHora);
+        System.out.printf("%tp\n", dataHora);
 
         java.time.format.DateTimeFormatter formatador = java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
         System.out.printf("%s", dataHora.format(formatador));
