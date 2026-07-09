@@ -40,6 +40,8 @@ public class DateAndTimeConversion {
         java.time.format.DateTimeFormatter formatador = java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
         System.out.printf("%s", dataHora.format(formatador));
 
+        // Format Specifier: % argument index $ flag - width t . precision - conversion character -> conversion character
+
     }
 
 }
