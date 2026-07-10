@@ -19,5 +19,22 @@ public class ControlFlow {
             int n; // K is only defined up to here
         }
 
+        // Conditional Statements
+
+        //if(condition statement)
+        {
+            // Execute multiple statements when a single condition is true.
+        }
+
+        int yourSales = 0;
+        int targetSales = 100;
+        if(yourSales > targetSales) {
+            java.lang.String performance = "Satisfatory";
+            int bonus = 1;
+            System.out.println(performance + " Total: " + bonus);
+        }
+
+
+
     }
 }
