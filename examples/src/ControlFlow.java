@@ -34,6 +34,25 @@ public class ControlFlow {
             System.out.println(performance + " Total: " + bonus);
         }
 
+        if(yourSales >= targetSales) {
+            java.lang.String performance = "Satisfactory";
+            int bonus = 100;
+        }
+        else {
+            java.lang.String performance = "Unsatisfactory";
+            int bonus = 0;
+        }
+
+        // Else groups with the closest if.
+        // Always use braces to clarify the code.
+        if(yourSales > 100) {
+
+        } else if (yourSales > 100 && yourSales < 150) {
+
+        } else {
+
+        }
+
 
 
     }
