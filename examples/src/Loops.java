@@ -84,4 +84,11 @@ public class Loops {
 
     }
 
+    // Controlled by counter or similar variable thatis updated every iteration
+    public static void determinateLoops() {
+        for(int i = 1;i <= 10; i++) {
+            System.out.println(i);
+        }
+    }
+
 }
