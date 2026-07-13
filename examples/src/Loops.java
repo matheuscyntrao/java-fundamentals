@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Loops {
 
     static void main() {
@@ -24,6 +26,32 @@ public class Loops {
             balance -= 500;
             System.out.println(balance);
         } while(balance > 100);
+    }
+
+    public static void retirement() {
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("How much money do you need to retire?");
+        double goal = in.nextDouble();
+
+        System.out.println("How much money will you contribute every year?");
+        double payment = in.nextDouble();
+
+        System.out.println("Interestrate in %:");
+        double interestRate = in.nextDouble();
+
+        double balance = 0;
+        int years = 0;
+
+        while(balance < goal) {
+            balance += payment;
+            double interest = balance * interestRate / 100;
+            balance += interest;
+            years++;
+        }
+
+        System.out.println("You can retire in " + years + "years.");
+
     }
 
 }
