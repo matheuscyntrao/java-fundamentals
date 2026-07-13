@@ -16,7 +16,7 @@ public class ControlFlow {
 
         // You may not declare identically named variables in two nested blocks.
         if(true != false) {
-            int n; // K is only defined up to here
+            //int n; // K is only defined up to here
         }
 
         // Conditional Statements
