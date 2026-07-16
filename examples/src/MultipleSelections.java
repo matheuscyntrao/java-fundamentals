@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+@SuppressWarnings("fallthourgh")
 public class MultipleSelections {
 
     static void main() {
@@ -14,6 +15,8 @@ public class MultipleSelections {
             case 4: break;
             default: break;
         }
+
+        // I don't know why, but I guess oracle don't like switch statement that much (use Strategy)
     }
 
 }
