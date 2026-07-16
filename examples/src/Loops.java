@@ -26,6 +26,9 @@ public class Loops {
             balance -= 500;
             System.out.println(balance);
         } while(balance > 100);
+
+        //retirement();
+        odd();
     }
 
     public static void retirement() {
@@ -85,10 +88,31 @@ public class Loops {
     }
 
     // Controlled by counter or similar variable thatis updated every iteration
+    int counter = 0; // You can also declare the variable outside, when you need to operate after for is complete.
     public static void determinateLoops() {
+        // Be careful with testing for equality off floating-point numbers in loops.
         for(int i = 1;i <= 10; i++) {
             System.out.println(i);
         }
+    }
+    // Basically, the for loop is a shortcut for a while loop.
+
+
+
+    static void odd() {
+
+        // Odds of winning a lottery
+        // Select 6 numbers for 1 to 50
+        int lotteryOdd = 1;
+        int k = 6; // Numbers of an odd
+        int n = 50; // Higest number
+
+        for(int i = 1; i <= k; i++) {
+            lotteryOdd = lotteryOdd * (n - i + 1)/ i;
+        }
+
+        System.out.println(lotteryOdd);
+
     }
 
 }
