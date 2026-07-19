@@ -24,7 +24,6 @@ public class StatementsThatBreakControlFlow {
         // Do not use goto (is a reserved word in java) but it's a poor style (comments by Oracle)
         Scanner in = new Scanner(System.in);
         int n = 10;
-
         labelsInJava:
         wtf:
         ididntknowthat:
@@ -40,6 +39,18 @@ public class StatementsThatBreakControlFlow {
             }
         }while(n <= 10);
 
+        //That's not recommended to use break inside the code.
+        //Always out of block, never into a block.
+
+        Scanner input = new Scanner(System.in);
+        int sum = 1;
+        int goal = 1000;
+        while(sum < goal) {
+            System.out.println("Enter a number:");
+            int o = input.nextInt();
+            if(o < 0) continue;
+            sum += n;
+        }
     }
 
 }
