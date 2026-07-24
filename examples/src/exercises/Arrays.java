@@ -32,9 +32,17 @@ public class Arrays {
         String[] names = new String[10];
         for(int i = 0; i < 10; i++) names[i] = ""; // Warning: index out of bounds, always initialize you array (as we do with variables)
 
+        // The foreach loop - powerfull looping construct loop thourgh elements without any index values
 
+        // for (variable: collection) statement
 
+        // Implements the Iterable interface such as ArrayList.
+        for (String element : names)
+            System.out.println(element);
 
+        // The same thing
+        for(int i = 0; i < names.length; i++)
+            System.out.println(names[i]);
 
     }
 
