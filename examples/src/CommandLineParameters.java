@@ -10,4 +10,7 @@ public class CommandLineParameters {
         System.out.println("!");
     }
 
+    // javac CommandLineParameters.java
+    // java CommandLineParameters -g cruel world
+
 }
