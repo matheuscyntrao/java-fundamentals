@@ -29,6 +29,20 @@ public class LotteryDrawing {
         System.out.println("Bet the following combination. It'll make you rich!");
         for(int r: result)
             System.out.println(r);
+
+        // static toString(xxx[])
+        // static xxx[] copyOf(xxx[] a, int end)
+        // static xxx[] copyOfRange(xxx[] a, int start, int end)
+        // static void sort (xxx[] a)
+
+        // static int binarySearch(xxx[] a, xxx v)
+        // static int binarySearch(xxx[] a int start, int end, xxx v) return the index or a negative value if it's not found
+        // in this case, returned value -1 is the correct index to put some new elements to keep array sorted
+
+        // static void fill(xxx[] a, xxx v) set all elements of the array to v
+        // static boolean equals (xxx[] a, xxx[b] b) return true if the array have the same length and same values at corresponding index position
+
+
     }
 
 }
