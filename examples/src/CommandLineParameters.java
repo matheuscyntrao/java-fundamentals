@@ -8,6 +8,11 @@ public class CommandLineParameters {
         for(int i = 0; i < args.length; i++)
             System.out.println(" " + args[i]);
         System.out.println("!");
+
+        // Quick sort algorithm that is claimed to be efficient on most data sets.
+        int[] a = new int[] {1, 3, 2, 0, 100, 200, 54};
+        java.util.Arrays.sort(a);
+
     }
 
     // javac CommandLineParameters.java
