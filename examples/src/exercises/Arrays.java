@@ -44,6 +44,21 @@ public class Arrays {
         for(int i = 0; i < names.length; i++)
             System.out.println(names[i]);
 
+        // For each loop is a pleasant improvement over the traditional loop if you need to process all elements in a collection
+        // If you don't need, use for and conditions
+        System.out.printf(java.util.Arrays.toString(names)); // Return the values printed and not the object references
+
+        // Array copying
+        int[] luckyNumbers = new int [] { 1, 2 };
+        luckyNumbers[1] = 10;
+
+        // This is the correct way to copy an array
+        // If you pass the length greater than the array copied length, all values are filled with ZERO or false if the array type is boolean
+        int[] copiedLuckynumbers = java.util.Arrays.copyOf(luckyNumbers, luckyNumbers.length);
+
+
+
+
     }
 
 }
