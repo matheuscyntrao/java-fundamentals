@@ -26,7 +26,18 @@ public class Objects {
     // Relationships between classes
 
     // Dependence (uses-a) relationship, is the most obvious and also the most general. Order uses Account class. Item doesn't depende on the Account class. A class depends on another class if its methods use or manupulate objects of that class.
-    // Aggregation (has-a) try to minimize the number of classes that depende on each other. The point is, if a class A is unaware of the existence of a class , it is also unconcerned about any changes to B.
-    // Inheritance (i-a) is easy to understand because its concrete, Order has Items = Containment.
+    // Aggregation (has-a) is easy to understand because its concrete, Order has Items = Containment.
+    // Inheritance (is-a) express relationship between a more special and a more general class. RushOrder class inherits from an Order class. The specialized RushOrder class has special methods for priotiy handling and a different method for computing shipping charges, but its other methods, such as adding items and billing, are inherited from the Order class.
+
+    // Unified Modeling Language (UML)
+    // Inheritance (linha continua -> seta fechada)
+    // Interface implementation (linha tracejada -> seta fechada)
+    // Dependency (linha tracejada -> seta aberta)
+    // Aggregation (losango -> linha continua)
+    // Association (linha continua)
+    // Directed association (linha continua -> seta aberta)
+
+    // Using predefined classes (tomorrow)
+
 
 }
