@@ -13,4 +13,14 @@ public class Objects {
         // Identifier (SQL id, UUID transactions, HashCode equals)
         // Differ AWAYS identity and USUALLY differ in their state
 
+    // Identifying Classes
+    // In a tradicional procedural program, you start the process at the top with the main function
+    // When designing an object-oriented system, there is no "top" and newcomers to OOP often wonder where to begin.
+    // The answer is: Identify your classes and then add methods to each class.
+    // For example, in an order-processing system, some of the nouns are:
+    // Item > Order > Shipping address > Payment > Account
+    // Identify the object that has the major responsability for carrying it out.
+    // When a new item is added to an order, the order object should be the one in charge because it knows how it stores and sorts items.
+    // That is, add should be a method of the Order class that takes an Item object as parameter.
+
 }
