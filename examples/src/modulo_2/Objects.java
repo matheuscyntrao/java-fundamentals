@@ -23,4 +23,10 @@ public class Objects {
     // When a new item is added to an order, the order object should be the one in charge because it knows how it stores and sorts items.
     // That is, add should be a method of the Order class that takes an Item object as parameter.
 
+    // Relationships between classes
+
+    // Dependence (uses-a) relationship, is the most obvious and also the most general. Order uses Account class. Item doesn't depende on the Account class. A class depends on another class if its methods use or manupulate objects of that class.
+    // Aggregation (has-a) try to minimize the number of classes that depende on each other. The point is, if a class A is unaware of the existence of a class , it is also unconcerned about any changes to B.
+    // Inheritance (i-a) is easy to understand because its concrete, Order has Items = Containment.
+
 }
