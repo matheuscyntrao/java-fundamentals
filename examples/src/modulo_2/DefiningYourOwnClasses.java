@@ -32,6 +32,8 @@ public class DefiningYourOwnClasses {
 
         }
 
+    }
+
         static void main() {
 
             Employee[] staff = new Employee[3];
@@ -40,6 +42,16 @@ public class DefiningYourOwnClasses {
             staff[1] = new Employee();
             staff[2] = new Employee();
 
+            for(Employee e : staff) {
+                e.method1();
+                e.method2();
+                e.method3();
+            }
+
+            for(Employee e : staff) {
+                System.out.println("name=" + e.field1 + ",salary=" + e.field2 + ",hireDay=" + e.field3);
+            }
+
         }
     }
-}
+
