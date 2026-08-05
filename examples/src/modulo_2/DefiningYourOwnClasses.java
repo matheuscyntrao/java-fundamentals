@@ -7,7 +7,7 @@ public class DefiningYourOwnClasses {
     // Instead, they have their own instance fields and methods.
     // To build a complete program, you combine several classes, one of which has a main method.
 
-    public class Employee {
+    public static class Employee {
 
         // Instance fields
         int field1;
@@ -29,6 +29,16 @@ public class DefiningYourOwnClasses {
         }
 
         public void method3() {
+
+        }
+
+        static void main() {
+
+            Employee[] staff = new Employee[3];
+
+            staff[0] = new Employee();
+            staff[1] = new Employee();
+            staff[2] = new Employee();
 
         }
     }
