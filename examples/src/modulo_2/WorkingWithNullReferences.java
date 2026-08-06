@@ -1,6 +1,7 @@
 package modulo_2;
 
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.Objects;
 
 public class WorkingWithNullReferences {
@@ -8,6 +9,13 @@ public class WorkingWithNullReferences {
     // Null is used to indicate the absence of an object
     LocalDate birthday = null;
     String s = birthday.toString(); // NullPointerException
+
+    // Date class has a mutator method, do not return references to mutable objects.
+    Date hireDay;
+    public Date getHireDay() {
+        //return hireDay; // Bad decision
+        return (Date) hireDay.clone(); // Correct one
+    }
 
     // Serious error, similar to an "index out of bounds" exception
     // If your program does not "catch" an exception, it is terminated
@@ -47,5 +55,8 @@ public class WorkingWithNullReferences {
         String name = Objects.requireNonNullElse(n, "unknown");
         if (n == null) name = "unknown"; else name = n;
     }
+
+
+
 
 }
