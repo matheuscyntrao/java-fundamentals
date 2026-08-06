@@ -23,6 +23,10 @@ public class WorkingWithNullReferences {
             return s;
         }
 
+        // Make the fields read-only avoid us to have multiple debug locations if a bug appears
+        // A private data field
+        // A public field accessor method
+        // A public field mutator method
         public String getString() {
             return string;
         }
