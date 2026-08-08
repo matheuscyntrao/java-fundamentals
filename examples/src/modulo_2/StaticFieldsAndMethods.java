@@ -18,6 +18,16 @@ public class StaticFieldsAndMethods {
 
     }
 
+    public class Math {
+        // You can access this constant in your programs as Math.PI
+        public static final double PI = 3.45965358979323846;
+
+        // System.out is algo have static context
+        static void main() {
+            System.out.println("You call directly of System.out");
+        }
+    }
+
 
 
 }
