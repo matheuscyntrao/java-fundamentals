@@ -28,6 +28,20 @@ public class StaticFieldsAndMethods {
         }
     }
 
+    // Static methods are methods that do not operate on objects.
+    // Math.pow(x,a)
+    // This doesn't carry out any Math objects in his task.
+    // They don't have "this" parameter (implicity parameter, which is the object itself)
+    // Static methods can access static fields
+
+    class Employee2 {
+        private static int nextId2 = 1;
+
+        public static int getNextId() {
+            return nextId2;
+        }
+
+    }
 
 
 }
