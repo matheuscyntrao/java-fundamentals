@@ -43,5 +43,9 @@ public class StaticFieldsAndMethods {
 
     }
 
+    // Uses for static methods
+    // When a methods doesn't need to access the object state because all needed parameters are supplied as explicit parameters
+    // When a method only needs to access static fields of the class
+
 
 }
