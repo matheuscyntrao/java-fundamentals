@@ -21,7 +21,7 @@ public class WorkingWithNullReferences {
     // If your program does not "catch" an exception, it is terminated
     // Variables like name, hireDay it will be not null, but salary for example have no worries (because primitive type of double cannot be null)
 
-    public class Employee2 {
+    public static class Employee2 {
 
         String s = null;
         String string = Objects.requireNonNullElse(s, "unknown");
