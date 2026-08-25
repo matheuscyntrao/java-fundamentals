@@ -1,4 +1,4 @@
-package modulo_2;
+package modulo_3;
 
 public class TheClassPath {
 
