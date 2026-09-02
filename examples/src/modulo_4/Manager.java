@@ -13,9 +13,28 @@ public class Manager extends WorkingWithNullReferences.Employee2 {
         this.raiseSalary(100.00); // from the employee2 class
     }
 
+    // Overloading
+    public Manager(String s, String name, double salary, boolean isOverloading) {
+        super(s, name, salary);
+        if(isOverloading) {
+            System.out.println("Manager Class");
+        }
+    }
+
+    public Manager(String s, String name, double salary) {
+        super(s, name, salary);
+    }
+
     static void main() {
-        Manager boss = new Manager();
+        Manager boss = new Manager("s", "string", 1.00);
         boss.setBonus(100.00);
+    }
+
+    // Overriding
+    @Override
+    public double getSalary() {
+        double baseSalary = super.getSalary();
+        return baseSalary + bonus;
     }
 
 }

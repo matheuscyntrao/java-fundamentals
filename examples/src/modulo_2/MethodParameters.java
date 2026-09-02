@@ -39,7 +39,7 @@ public class MethodParameters {
     }
 
     static void main2() {
-        WorkingWithNullReferences.Employee2 harry = new WorkingWithNullReferences.Employee2();
+        WorkingWithNullReferences.Employee2 harry = new WorkingWithNullReferences.Employee2("s", "String", 100.00);
         harry.raiseSalary(2000);
         System.out.println(harry.string + "" + harry.s + "" + harry.salary);
     }

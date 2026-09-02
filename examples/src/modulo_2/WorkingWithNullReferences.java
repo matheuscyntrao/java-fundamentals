@@ -27,6 +27,12 @@ public class WorkingWithNullReferences {
         String string = Objects.requireNonNullElse(s, "unknown");
         double salary = 0.00;
 
+        public Employee2(String s, String string, double salary) {
+            this.s = s;
+            this.string = string;
+            this.salary = salary;
+        }
+
         public String getS() {
             return s;
         }
@@ -38,6 +44,8 @@ public class WorkingWithNullReferences {
         public String getString() {
             return string;
         }
+
+        public double getSalary() { return this.salary; }
 
         // Implicit is the target or receiver (Employee)
         // Explicit parameter is the number inside the parameters (byPercent)
