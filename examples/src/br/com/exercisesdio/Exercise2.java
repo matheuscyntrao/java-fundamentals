@@ -21,10 +21,16 @@ public class Exercise2 {
     pares ou ímpares (de acordo com a seleção inicial) no intervalo de números informados,
     incluindo os números informados e em ordem decrescente;
 
-    Escreva um código onde o usuário informa um número inicial, posteriormente irá informar outros N números, a execução do código irá continuar até que o número informado dividido pelo primeiro número tenha resto diferente de 0 na divisão, números menores que o primeiro número devem ser ignorados
+    Escreva um código onde o usuário informa um número inicial, posteriormente irá informar
+    outros N números, a execução do código irá continuar até que o número informado dividido
+    pelo primeiro número tenha resto diferente de 0 na divisão, números menores que o primeiro
+    número devem ser ignorados
+
      */
 
     static void main() {
+
+        modNumber();
         parOuImparDecrescenteRanged();
         obesidade();
 
@@ -91,6 +97,18 @@ public class Exercise2 {
                 }
             }
         }
+    }
+
+    static void modNumber() {
+        var scanner = new Scanner(System.in);
+        System.out.println("Informe um numero");
+        var numero1 = scanner.nextInt();
+        int numero2;
+        do {
+            System.out.println("Informe outro número");
+            numero2 = scanner.nextInt();
+        } while(numero1 % numero2 != 0);
+        System.out.println("Fim da execução");
     }
 
 }
