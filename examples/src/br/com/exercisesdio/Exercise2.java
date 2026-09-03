@@ -16,13 +16,16 @@ public class Exercise2 {
         Se for entre 35,0 e 39,9 "Obesidade Grau II (Severa)";
         Se for maior ou igual a 40,0 "Obesidade III (Mórbida)";
 
-    Escreva um código que o usuário entre com um primeiro número, um segundo número maior que o primeiro e escolhe entre a opção par e impar, com isso o código deve informar todos os números pares ou ímpares (de acordo com a seleção inicial) no intervalo de números informados, incluindo os números informados e em ordem decrescente;
+    Escreva um código que o usuário entre com um primeiro número, um segundo número maior que o
+    primeiro e escolhe entre a opção par e impar, com isso o código deve informar todos os números
+    pares ou ímpares (de acordo com a seleção inicial) no intervalo de números informados,
+    incluindo os números informados e em ordem decrescente;
 
     Escreva um código onde o usuário informa um número inicial, posteriormente irá informar outros N números, a execução do código irá continuar até que o número informado dividido pelo primeiro número tenha resto diferente de 0 na divisão, números menores que o primeiro número devem ser ignorados
      */
 
     static void main() {
-
+        parOuImparDecrescenteRanged();
         obesidade();
 
         var arr = new ArrayList<Integer>();
@@ -56,6 +59,37 @@ public class Exercise2 {
             System.out.println("Obesidade Grau II (Severa)");
         } else if (imc >= 40.0) {
             System.out.println("Obesidade III (Mórbida)");
+        }
+    }
+
+    static void parOuImparDecrescenteRanged() {
+        var scanner = new Scanner(System.in);
+        String escolha = "";
+        var numero2 = -1;
+        System.out.println("Escolha um número");
+        var numero1 = scanner.nextInt();
+        do {
+            System.out.println("Escolha outro número");
+            numero2 = scanner.nextInt();
+        }
+        while(numero2 < numero1);
+        do {
+            System.out.println("Escolha entre par e ímpar");
+            escolha = scanner.next();
+        }
+        while(!escolha.equals("par") && !escolha.equals("impar"));
+        if(escolha.equals("par")) {
+            for(int i = numero1; i <= numero2; i++) {
+                if(i % 2 == 0) {
+                    System.out.println(i);
+                }
+            }
+        } else {
+            for(int i = numero1; i <= numero2; i++) {
+                if(i % 2 != 0) {
+                    System.out.println(i);
+                }
+            }
         }
     }
 
