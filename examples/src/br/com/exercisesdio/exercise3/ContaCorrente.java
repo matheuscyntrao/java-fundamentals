@@ -50,7 +50,6 @@ public class ContaCorrente {
             saldo = 0;
             chequeEspecial -= valorSacadoChequeEspecial;
 
-            // Gera taxa de 20% sobre o valor utilizado do cheque especial
             double taxaGerada = valorSacadoChequeEspecial * 0.20;
             taxaChequeEspecialPendente += taxaGerada;
 
