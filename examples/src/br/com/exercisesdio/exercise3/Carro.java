@@ -81,7 +81,7 @@ public class Carro {
 
     public void desacelerar() {
         if (!this.isIgnicao) {
-            System.out.println("Não é possível desacelerar: o carro está desligado.");
+            System.out.println("O carro está desligado.");
         } else if (this.velocidade <= LIMITE_MINIMO_VELOCIDADE) {
             System.out.println("O carro já está parado.");
         } else if (verificarLimiteVelocidade(this.velocidade - 1)) {
