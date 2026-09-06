@@ -21,6 +21,7 @@ public class Exercicio4 {
     A classe Vendedor deve ter os métodos Realizar venda ( incrementar o número de vendas quando acionado), Consultar vendas, Realizar login, Realizar logoff, alterar dados, alterar senha;
     A classe Atendente deve ter os métodos Receber pagamentos (onde o método recebe um valor que deve ser incrementado no valor em caixa), Fechar o caixa, Realizar Login, Realizar logoff, alterar dados e alterar senha;
 
+
     Escreve uma hierarquia de classes para criação de relógios para
     diferentes lugares do mundo, defina uma classe pai que tenha as
     propriedades Hora, minuto e segundo com seus respectivos getters

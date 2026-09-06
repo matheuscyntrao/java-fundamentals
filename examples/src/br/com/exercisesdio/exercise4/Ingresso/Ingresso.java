@@ -1,4 +1,4 @@
-package br.com.exercisesdio.exercise4;
+package br.com.exercisesdio.exercise4.Ingresso;
 /*
     1.Crie uma hierarquia de classes para tratar os tipos de ingresso que podem ser comercializados em um cinema.
     O ingresso deve ter um valor, nome do filme e informar se é dublado ou legendado. A partir desse ingresso

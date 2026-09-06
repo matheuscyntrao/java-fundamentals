@@ -1,4 +1,4 @@
-package br.com.exercisesdio.exercise4;
+package br.com.exercisesdio.exercise4.Ingresso;
 
 public final class MeiaEntrada extends Ingresso {
 
