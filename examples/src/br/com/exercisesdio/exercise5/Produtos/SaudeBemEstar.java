@@ -1,22 +1,13 @@
 package br.com.exercisesdio.exercise5.Produtos;
 
-public class SaudeBemEstar implements Produto {
-
-    private final double valor;
+public class SaudeBemEstar extends Produto {
 
     public SaudeBemEstar(double valor) {
-        this.valor = valor;
+        super(valor);
     }
-
     @Override
     public double valorImposto() {
         return this.getValor() * 0.015;
     }
-
-    @Override
-    public double getValor() {
-        return this.valor;
-    }
-
 
 }
