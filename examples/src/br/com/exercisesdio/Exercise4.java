@@ -1,6 +1,6 @@
 package br.com.exercisesdio;
 
-public class Exercicio4 {
+public class Exercise4 {
 
     /*
     1.Crie uma hierarquia de classes para tratar os tipos de ingresso que podem ser comercializados em um cinema.
