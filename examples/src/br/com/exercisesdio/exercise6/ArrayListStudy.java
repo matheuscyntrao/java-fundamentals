@@ -94,6 +94,7 @@ public class ArrayListStudy {
     // Ele altera internamente o tamanho do size mas não desocupa a memória alocada, gerando trabalho pro GC.
     // Ao aplicar o trimToSize, ele altera tanto o size para 0, quando diminui o recurso alocado em memória
     static void main() throws Exception {
+        // Detalhe = Sempre implementar diretamente a interface, quando for código produtivo, a não ser que seja estritamente necessário.
         ArrayList<String> arrayList = new ArrayList<>();
         for(int i = 0; i < 1_000_000; i++) {
             arrayList.add("index" + i);
@@ -101,7 +102,7 @@ public class ArrayListStudy {
         arrayList.clear();
         System.out.println("Aplicando clear size: " + arrayList.size());
         imprimirCapacidade("Memória", arrayList);
-        arrayList.trimToSize();
+        arrayList.trimToSize(); // Só deve ser chamado em pontos muito específicos do código onde você acabou de popular um array gigante e precisa liberar RAM imediatamente.
         System.out.println("Aplicando trimToSize: " + arrayList.size());
         imprimirCapacidade("Memória", arrayList);
     }
