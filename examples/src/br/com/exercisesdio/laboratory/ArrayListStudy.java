@@ -1,4 +1,4 @@
-package br.com.exercisesdio.exercise6;
+package br.com.exercisesdio.laboratory;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
