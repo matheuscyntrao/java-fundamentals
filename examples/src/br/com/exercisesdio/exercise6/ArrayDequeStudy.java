@@ -1,14 +1,12 @@
 package br.com.exercisesdio.exercise6;
 
 import java.lang.reflect.Field;
-import java.util.ArrayDeque;
-import java.util.Arrays;
-import java.util.Deque;
-import java.util.Queue;
+import java.util.*;
+import java.util.concurrent.ArrayBlockingQueue;
 
 public class ArrayDequeStudy {
 
-    public static void lerCamposInternos(Object obj) {
+    public static void lerCamposInternosQueue(Object obj) {
         try {
             Class<?> clazz = obj.getClass();
             Field fieldElements = clazz.getDeclaredField("elements");
@@ -31,10 +29,41 @@ public class ArrayDequeStudy {
         }
     }
 
-    static void comportamentoTailHead(String[] args) {
+    public static void lerCamposBlockingQueue(Object obj) {
+        try {
+            Class<?> clazz = obj.getClass();
+
+            Field fieldItems = clazz.getDeclaredField("items");
+            fieldItems.setAccessible(true);
+            Object[] items = (Object[]) fieldItems.get(obj);
+
+            Field fieldTake = clazz.getDeclaredField("takeIndex");
+            fieldTake.setAccessible(true);
+            int takeIndex = fieldTake.getInt(obj);
+
+            Field fieldPut = clazz.getDeclaredField("putIndex");
+            fieldPut.setAccessible(true);
+            int putIndex = fieldPut.getInt(obj);
+
+            Field fieldCount = clazz.getDeclaredField("count");
+            fieldCount.setAccessible(true);
+            int count = fieldCount.getInt(obj);
+
+            System.out.println("[ArrayBlockingQueue] takeIndex (Head): " + takeIndex +
+                    " | putIndex (Tail): " + putIndex +
+                    " | Count: " + count +
+                    " | Items: " + Arrays.toString(items));
+        } catch (NoSuchFieldException e) {
+            System.err.println("Campos da ArrayBlockingQueue não encontrados.");
+        } catch (IllegalAccessException e) {
+            System.err.println("Sem permissão para acessar campos privados.");
+        }
+    }
+
+    static void ponteiros(String[] args) {
         Deque<String> arrayDeque = new ArrayDeque<>(8);
         // Posição de "folga" pros ponteiros, é o que diferencia uma lista completa de uma não completa
-        lerCamposInternos(arrayDeque);
+        lerCamposInternosQueue(arrayDeque);
         arrayDeque.add("Teste1");
         arrayDeque.add("Teste2");
         arrayDeque.add("Teste3");
@@ -43,33 +72,62 @@ public class ArrayDequeStudy {
         arrayDeque.add("Teste6");
         arrayDeque.add("Teste7");
         arrayDeque.add("Teste8");
-        lerCamposInternos(arrayDeque);
+        lerCamposInternosQueue(arrayDeque);
         System.out.println("---");
         arrayDeque.addFirst("Teste9");
-        lerCamposInternos(arrayDeque);
+        lerCamposInternosQueue(arrayDeque);
         System.out.println("---");
         arrayDeque.addFirst("Teste10");
-        lerCamposInternos(arrayDeque);
+        lerCamposInternosQueue(arrayDeque);
         System.out.println("---");
         arrayDeque.addLast("Teste11");
-        lerCamposInternos(arrayDeque);
+        lerCamposInternosQueue(arrayDeque);
         System.out.println("---");
         arrayDeque.addLast("Teste12");
-        lerCamposInternos(arrayDeque);
+        lerCamposInternosQueue(arrayDeque);
     }
 
     static void main() {
-        Queue<String> fila = new ArrayDeque<>();
-        fila.offer("Cliente 1");
-        fila.offer("Cliente 2");
-        System.out.println("FIFO" + fila.poll());
+        Queue<String> filaComLimite = new ArrayBlockingQueue<>(5);
+        filaComLimite.add("1");
+        filaComLimite.add("2");
+        filaComLimite.add("3");
+        filaComLimite.add("4");
+        filaComLimite.add("5");
+        try {
+            filaComLimite.add("6");
+        } catch (IllegalStateException e) {
+            System.out.println("Fila cheia! add() lançou exceção.");
+        }
+        boolean inserido = filaComLimite.offer("6");
+        System.out.println("Inseriu '6'? " + inserido);
 
-        Deque<String> pilha = new ArrayDeque<>();
-        pilha.push("Página 1");
-        pilha.push("Página 2");
-        System.out.println("LIFO" + pilha.pop());
+        filaComLimite.remove();
+        filaComLimite.remove();
+        filaComLimite.remove();
+        filaComLimite.remove();
+        filaComLimite.remove();
+        try {
+            filaComLimite.remove();
+        } catch (NoSuchElementException ex) {
+            System.out.println("Fila vazia remove() lançou exceção.");
+        }
+        filaComLimite.add("1");
+        filaComLimite.add("2");
+        filaComLimite.add("3");
+        filaComLimite.add("4");
+        filaComLimite.add("5");
+        System.out.println(filaComLimite.poll());
+        lerCamposBlockingQueue(filaComLimite);
+        System.out.println(filaComLimite.poll());
+        lerCamposBlockingQueue(filaComLimite);
+        System.out.println(filaComLimite.poll());
+        lerCamposBlockingQueue(filaComLimite);
+        System.out.println(filaComLimite.poll());
+        lerCamposBlockingQueue(filaComLimite);
+        System.out.println(filaComLimite.poll());
+        lerCamposBlockingQueue(filaComLimite);
     }
-
 
 
 }
