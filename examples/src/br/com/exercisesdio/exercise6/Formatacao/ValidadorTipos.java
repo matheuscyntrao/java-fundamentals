@@ -11,19 +11,19 @@ import java.util.function.Function;
 
 public enum ValidadorTipos {
 
-    TEXTO((t) -> {
+    STRING((t) -> {
         if(t == null || t.trim().isEmpty()) return null;
         return t.trim();
     }),
-    DATA((t) -> {
+    DATE((t) -> {
         if (t == null || !t.trim().matches("\\d{2}/\\d{2}/\\d{4}")) throw new DateTimeException("Erro ao converter data");
         return LocalDate.parse(t.trim(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
     }),
-    DATA_HORA((t) -> {
+    DATE_TIME((t) -> {
         if (t == null || !t.trim().matches("\\d{2}/\\d{2}/\\d{4} \\d{2}:\\d{2}")) throw new DateTimeException("Erro ao converter data e hora");
         return LocalDateTime.parse(t.trim(), DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"));
     }),
-    NUMERO_FLUTUANTE((t) -> {
+    FLOAT((t) -> {
         try {
            return Double.parseDouble(t);
         } catch (NumberFormatException ex) {
@@ -31,7 +31,7 @@ public enum ValidadorTipos {
         }
         return null;
     }),
-    NUMERO_INTEIRO((t) -> {
+    INTEGER((t) -> {
         try {
             return Integer.parseInt(t);
 
@@ -40,7 +40,7 @@ public enum ValidadorTipos {
         }
         return null;
     }),
-    BOOLEANO((t) -> {
+    BOOLEAN((t) -> {
         if(!t.equalsIgnoreCase("true") && !t.equalsIgnoreCase("false")) {
             throw new IllegalArgumentException("Erro ao converter em null");
         }
