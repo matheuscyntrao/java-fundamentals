@@ -10,7 +10,7 @@ public class Test {
     public static String formatarNumero(long numero) {
         String numeroStr = String.valueOf(numero);
         long tamanho = numeroStr.length();
-        String padraoMascara = "";
+        String padraoMascara;
         switch((int) tamanho) {
             case 8:  padraoMascara = "####-####"; break;
             case 9:  padraoMascara = "# ####-####"; break;
