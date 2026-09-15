@@ -1,4 +1,4 @@
-package br.com.exercisesdio.exercise6;
+package br.com.exercisesdio.exercise6.Calculadora;
 
 import java.util.function.BiFunction;
 

@@ -1,4 +1,4 @@
-package br.com.exercisesdio.exercise6;
+package br.com.exercisesdio.laboratorio;
 
 import java.lang.reflect.Field;
 import java.util.ArrayDeque;
