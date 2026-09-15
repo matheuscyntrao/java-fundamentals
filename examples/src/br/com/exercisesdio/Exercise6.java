@@ -23,10 +23,17 @@ public class Exercise6 {
         Se receber com mascara incorreta, corrigir e retornar
         Se receber qualquer entrada que tenha números e outros caracteres verificar se tem números para compor um dos tipos aceitos e retornar do que se trata ou retornar que foi uma entrada inválida.
 
-    3 - Escreva um código que receba 3 valores separados por um caracter de sua escolha n vezes ( n é o número de vezes que o usuário desejar informar) ex.: nome;Lucas;Texto. Quando o usuário parar de informar valores o código deve retornar todos esses campos compondo um json, um xml e um yaml (Json: https://pt.wikipedia.org/wiki/JSON, XML: https://pt.wikipedia.org/wiki/XML, yaml: https://www.treinaweb.com.br/blog/o-que-e-yaml) as entradas devem seguir o seguinte padrão:
+    3 - Escreva um código que receba 3 valores separados por um caracter de sua escolha n vezes
+    ( n é o número de vezes que o usuário desejar informar) ex.: nome;Lucas;Texto. Quando o usuário
+    parar de informar valores o código deve retornar todos esses campos compondo um json, um xml
+    e um yaml (Json: https://pt.wikipedia.org/wiki/JSON, XML: https://pt.wikipedia.org/wiki/XML,
+    yaml: https://www.treinaweb.com.br/blog/o-que-e-yaml) as entradas devem seguir o seguinte padrão:
 
         NOME_CAMPO;VALOR;TIPO;
-        Os tipos que devem ser aceitos são: texto, datas, data e hora, números inteiros, números com pontos flutuantes, boleanos, array dos tipos anteriores ( opcional, possibilitar definir arrays de objetos e objetos internos).
+        Os tipos que devem ser aceitos são: texto, datas,
+        data e hora, números inteiros, números com pontos flutuantes,
+        boleanos, array dos tipos anteriores
+        ( opcional, possibilitar definir arrays de objetos e objetos internos).
 
      */
 }
