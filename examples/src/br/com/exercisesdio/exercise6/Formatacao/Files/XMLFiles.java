@@ -41,9 +41,10 @@ public class XMLFiles extends File {
 
     public String parseXML(Map<String, Object> content) {
         StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
         stringBuilder.append("<dados>");
         for (Map.Entry<String, Object> entry : content.entrySet()) {
-            stringBuilder.append("<"+ entry.getKey()+">"+entry.getValue() +"</"+ entry.getKey()+">");
+            stringBuilder.append("<").append(entry.getKey()).append(">").append(entry.getValue()).append("</").append(entry.getKey()).append(">");
         }
         stringBuilder.append("</dados>");
         return String.valueOf(stringBuilder);

@@ -2,6 +2,9 @@ package br.com.exercisesdio.exercise6.Formatacao.Files;
 
 import br.com.exercisesdio.exercise6.Formatacao.FileManager;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Map;
 
 public class YAMLFiles extends File {
@@ -17,6 +20,12 @@ public class YAMLFiles extends File {
 
     @Override
     public boolean write(Map<String, Object> content) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(getFullDir().toFile()))) {
+            writer.write(String.valueOf(parseYAML(content)));
+            return true;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return false;
     }
 
@@ -28,6 +37,14 @@ public class YAMLFiles extends File {
     @Override
     public String edit(Map<String, Object> content) {
         return "";
+    }
+
+    public String parseYAML(Map<String, Object> content) {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (Map.Entry<String, Object> entry : content.entrySet()) {
+            stringBuilder.append(entry.getKey()).append(": ").append(entry.getValue()).append("\n");
+        }
+        return String.valueOf(stringBuilder);
     }
 
 }

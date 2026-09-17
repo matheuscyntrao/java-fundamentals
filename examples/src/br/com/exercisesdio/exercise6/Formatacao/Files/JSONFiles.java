@@ -46,9 +46,9 @@ public class JSONFiles extends File {
             stringBuilder.append("\"" + entry.getKey() + "\"");
             stringBuilder.append(":");
             if(entry.getValue() instanceof String || entry.getValue() instanceof LocalDate || entry.getValue() instanceof LocalDateTime) {
-                stringBuilder.append("\""+ entry.getValue() +"\"");
+                stringBuilder.append("\"").append(entry.getValue()).append("\"");
             } else {
-                stringBuilder.append("" + entry.getValue());
+                stringBuilder.append(entry.getValue());
             }
             if(!(index == totalSize - 1)) {
                 stringBuilder.append(",");
