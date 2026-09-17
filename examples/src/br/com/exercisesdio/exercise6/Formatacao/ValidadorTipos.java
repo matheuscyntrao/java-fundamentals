@@ -24,11 +24,11 @@ public enum ValidadorTipos {
         if (t == null || !t.trim().matches("\\d{2}/\\d{2}/\\d{4} \\d{2}:\\d{2}")) throw new DateTimeException("Erro ao converter data e hora");
         return LocalDateTime.parse(t.trim(), DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"));
     }),
-    FLOAT(Double::parseDouble),
+    FLOAT(Float::parseFloat),
     INTEGER(Integer::parseInt),
     BOOLEAN((t) -> {
         if(!t.equalsIgnoreCase("true") && !t.equalsIgnoreCase("false")) {
-            throw new IllegalArgumentException("Erro ao converter em null");
+            throw new IllegalArgumentException("Erro ao converter em boolean");
         }
         return Boolean.parseBoolean(t);
     });
