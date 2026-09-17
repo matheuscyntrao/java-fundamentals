@@ -42,12 +42,15 @@ public class XMLFiles extends File {
     public String parseXML(Map<String, Object> content) {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
-        stringBuilder.append("<dados>");
+        stringBuilder.append("<dados>\n");
         for (Map.Entry<String, Object> entry : content.entrySet()) {
-            stringBuilder.append("<").append(entry.getKey()).append(">").append(entry.getValue()).append("</").append(entry.getKey()).append(">");
+            String chaveLimpa = StripTags.limparChave(entry.getKey());
+            stringBuilder.append("  <").append(chaveLimpa).append(">")
+                    .append(StripTags.limparValor(entry.getValue()))
+                    .append("</").append(chaveLimpa).append(">\n");
         }
         stringBuilder.append("</dados>");
-        return String.valueOf(stringBuilder);
+        return stringBuilder.toString();
     }
 
 }

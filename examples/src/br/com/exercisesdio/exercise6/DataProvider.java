@@ -43,7 +43,7 @@ public class DataProvider {
                         },
                         () -> System.out.println("O valor difere do tipo informado.")
                 );
-            } catch (Exception e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println("O tipo informado não existe");
             }
         } while (true);

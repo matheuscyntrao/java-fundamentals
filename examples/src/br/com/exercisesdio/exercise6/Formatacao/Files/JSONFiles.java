@@ -43,14 +43,15 @@ public class JSONFiles extends File {
         int index = 0;
         int totalSize = content.size();
         for (Map.Entry<String, Object> entry : content.entrySet()) {
-            stringBuilder.append("\"" + entry.getKey() + "\"");
-            stringBuilder.append(":");
-            if(entry.getValue() instanceof String || entry.getValue() instanceof LocalDate || entry.getValue() instanceof LocalDateTime) {
-                stringBuilder.append("\"").append(entry.getValue()).append("\"");
+            stringBuilder.append("\"").append(StripTags.limparChave(entry.getKey())).append("\":");
+            Object valor = entry.getValue();
+            if (valor instanceof String || valor instanceof LocalDate || valor instanceof LocalDateTime) {
+                String valorEscapado = StripTags.limparValor(valor).replace("\"", "\\\"");
+                stringBuilder.append("\"").append(valorEscapado).append("\"");
             } else {
-                stringBuilder.append(entry.getValue());
+                stringBuilder.append(valor);
             }
-            if(!(index == totalSize - 1)) {
+            if (index < totalSize - 1) {
                 stringBuilder.append(",");
             }
             index++;
