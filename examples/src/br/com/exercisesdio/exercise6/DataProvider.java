@@ -1,11 +1,13 @@
 package br.com.exercisesdio.exercise6;
 
+import br.com.exercisesdio.exercise6.Formatacao.Files.JSONFiles;
 import br.com.exercisesdio.exercise6.Formatacao.ValidadorTipos;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
 
 public class DataProvider {
+
 
     static void main() {
         Map<String, Object> dadosColetados = new LinkedHashMap<>();
@@ -43,20 +45,12 @@ public class DataProvider {
                 System.out.println("O tipo informado não existe");
             }
         } while (true);
-
-        System.out.println("\nGerando arquivos no diretório.");
-        dadosColetados.forEach((campo, valor) -> {
-            /*
-                CONTINUAR AQUI
-                input/output de arquivos para já gerar os arquivos corretamente
-
-                astração e interfaces
-                json
-                xml
-                yml
-             */
-            System.out.println(campo + " -> " + valor + " (" + valor.getClass().getSimpleName() + ")");
-        });
         scanner.close();
+
+
+        JSONFiles jsonFiles = new JSONFiles("dados.json");
+        jsonFiles.write(dadosColetados);
+
+
     }
 }

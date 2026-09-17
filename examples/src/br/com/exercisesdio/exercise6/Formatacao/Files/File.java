@@ -15,7 +15,7 @@ public abstract class File implements FileManager {
         this.fileName = fileName;
         try {
             Files.createDirectories(this.getFullDir().getParent());
-
+            System.out.println("Arquivo encontrado");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

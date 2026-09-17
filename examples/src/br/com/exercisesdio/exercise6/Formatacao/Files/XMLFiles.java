@@ -16,8 +16,8 @@ public class XMLFiles extends File {
     }
 
     @Override
-    public String write(Map<String, Object> content) {
-        return "";
+    public boolean write(Map<String, Object> content) {
+        return false;
     }
 
     @Override

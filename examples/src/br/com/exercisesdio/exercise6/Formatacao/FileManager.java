@@ -6,7 +6,7 @@ public interface FileManager {
 
     Map<String, Object> read();
 
-    String write(final Map<String, Object> content);
+    boolean write(final Map<String, Object> content);
 
     boolean delete(final String key);
 
