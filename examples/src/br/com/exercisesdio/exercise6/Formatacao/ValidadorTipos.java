@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.Optional;
 import java.util.function.Function;
 
 public enum ValidadorTipos {
@@ -23,23 +24,8 @@ public enum ValidadorTipos {
         if (t == null || !t.trim().matches("\\d{2}/\\d{2}/\\d{4} \\d{2}:\\d{2}")) throw new DateTimeException("Erro ao converter data e hora");
         return LocalDateTime.parse(t.trim(), DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"));
     }),
-    FLOAT((t) -> {
-        try {
-           return Double.parseDouble(t);
-        } catch (NumberFormatException ex) {
-            System.out.println("Problema ao converter ponto flutuante.");
-        }
-        return null;
-    }),
-    INTEGER((t) -> {
-        try {
-            return Integer.parseInt(t);
-
-        } catch (NumberFormatException ex) {
-            System.out.println("Problema ao converter tipo inteiro.");
-        }
-        return null;
-    }),
+    FLOAT(Double::parseDouble),
+    INTEGER(Integer::parseInt),
     BOOLEAN((t) -> {
         if(!t.equalsIgnoreCase("true") && !t.equalsIgnoreCase("false")) {
             throw new IllegalArgumentException("Erro ao converter em null");
@@ -53,12 +39,12 @@ public enum ValidadorTipos {
         this.action = action;
     }
 
-    public Object apply(String texto) {
+    public Optional<Object> apply(String texto) {
         try {
-            return this.action.apply(texto);
-        } catch (DateTimeException | IllegalArgumentException ex) {
+            return Optional.ofNullable(this.action.apply(texto));
+        } catch (Exception ex) {
             System.out.println("Ocorreu erro na conversão dos tipos");
-            return null;
+            return Optional.empty();
         }
     }
 
