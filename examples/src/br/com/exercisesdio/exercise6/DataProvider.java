@@ -36,14 +36,14 @@ public class DataProvider {
             String tipoInformado = partes[2].trim().toUpperCase();
             try {
                 ValidadorTipos validador = ValidadorTipos.valueOf(tipoInformado);
-                Object valorConvertido = validador.apply(valorBruto);
-                if (valorConvertido != null) {
-                    dadosColetados.put(nomeCampo, valorConvertido);
-                    System.out.println("Campo gravado");
-                } else {
-                    System.out.println("O valor difere do tipo informado");
-                }
-            } catch (IllegalArgumentException e) {
+                validador.apply(valorBruto).ifPresentOrElse(
+                        valorConvertido -> {
+                            dadosColetados.put(nomeCampo, valorConvertido);
+                            System.out.println("Campo gravado com sucesso!");
+                        },
+                        () -> System.out.println("O valor difere do tipo informado.")
+                );
+            } catch (Exception e) {
                 System.out.println("O tipo informado não existe");
             }
         } while (true);
