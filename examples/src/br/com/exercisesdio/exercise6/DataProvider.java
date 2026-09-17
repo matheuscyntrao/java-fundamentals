@@ -1,6 +1,7 @@
 package br.com.exercisesdio.exercise6;
 
 import br.com.exercisesdio.exercise6.Formatacao.Files.JSONFiles;
+import br.com.exercisesdio.exercise6.Formatacao.Files.XMLFiles;
 import br.com.exercisesdio.exercise6.Formatacao.ValidadorTipos;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -50,6 +51,8 @@ public class DataProvider {
 
         JSONFiles jsonFiles = new JSONFiles("dados.json");
         jsonFiles.write(dadosColetados);
+        XMLFiles xmlFiles = new XMLFiles("dados.xml");
+        xmlFiles.write(dadosColetados);
 
 
     }
