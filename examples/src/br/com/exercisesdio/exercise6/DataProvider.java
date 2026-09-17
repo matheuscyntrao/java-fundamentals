@@ -49,14 +49,16 @@ public class DataProvider {
         } while (true);
         scanner.close();
 
-
-        JSONFiles jsonFiles = new JSONFiles("dados.json");
-        jsonFiles.write(dadosColetados);
-        XMLFiles xmlFiles = new XMLFiles("dados.xml");
-        xmlFiles.write(dadosColetados);
-        YAMLFiles yamlFiles = new YAMLFiles("dados.yml");
-        yamlFiles.write(dadosColetados);
-
+        if(!dadosColetados.isEmpty()) {
+            JSONFiles jsonFiles = new JSONFiles("dados.json");
+            jsonFiles.write(dadosColetados);
+            XMLFiles xmlFiles = new XMLFiles("dados.xml");
+            xmlFiles.write(dadosColetados);
+            YAMLFiles yamlFiles = new YAMLFiles("dados.yml");
+            yamlFiles.write(dadosColetados);
+        } else {
+            System.out.println("Nenhum dado foi coletado para realizar o parse.");
+        }
 
     }
 }
