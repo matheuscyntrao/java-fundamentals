@@ -4,12 +4,12 @@ import java.util.Map;
 
 public interface FileManager {
 
-    Map<String, Object> read();
+    //Map<String, Object> read();
 
     boolean write(final Map<String, Object> content);
 
-    boolean delete(final String key);
+    //boolean delete(final String key);
 
-    String edit(final Map<String, Object> content);
+    //String edit(final Map<String, Object> content);
 
 }

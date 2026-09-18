@@ -6,12 +6,12 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-public abstract class File implements FileManager {
+public abstract class MyFile implements FileManager {
 
     private final String userDir = System.getProperty("user.dir");
     private final String fileName;
 
-    public File(String fileName) {
+    public MyFile(String fileName) {
         this.fileName = fileName;
         try {
             Files.createDirectories(this.getFullDir().getParent());

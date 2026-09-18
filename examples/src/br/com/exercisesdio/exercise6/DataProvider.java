@@ -1,8 +1,8 @@
 package br.com.exercisesdio.exercise6;
 
-import br.com.exercisesdio.exercise6.Formatacao.Files.JSONFiles;
-import br.com.exercisesdio.exercise6.Formatacao.Files.XMLFiles;
-import br.com.exercisesdio.exercise6.Formatacao.Files.YAMLFiles;
+import br.com.exercisesdio.exercise6.Formatacao.Files.JSONIOFile;
+import br.com.exercisesdio.exercise6.Formatacao.Files.XMLIOFile;
+import br.com.exercisesdio.exercise6.Formatacao.Files.YAMLIOFile;
 import br.com.exercisesdio.exercise6.Formatacao.ValidadorTipos;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -50,11 +50,11 @@ public class DataProvider {
         scanner.close();
 
         if(!dadosColetados.isEmpty()) {
-            JSONFiles jsonFiles = new JSONFiles("dados.json");
-            jsonFiles.write(dadosColetados);
-            XMLFiles xmlFiles = new XMLFiles("dados.xml");
-            xmlFiles.write(dadosColetados);
-            YAMLFiles yamlFiles = new YAMLFiles("dados.yml");
+            JSONIOFile jsonioFile = new JSONIOFile("dados.json");
+            jsonioFile.write(dadosColetados);
+            XMLIOFile xmlioFile = new XMLIOFile("dados.xml");
+            xmlioFile.write(dadosColetados);
+            YAMLIOFile yamlFiles = new YAMLIOFile("dados.yml");
             yamlFiles.write(dadosColetados);
         } else {
             System.out.println("Nenhum dado foi coletado para realizar o parse.");

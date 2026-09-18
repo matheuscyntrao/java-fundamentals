@@ -1,43 +1,14 @@
-package br.com.exercisesdio.exercise6.Formatacao.Files;
+package br.com.exercisesdio.exercise6.Formatacao.Files.parsers;
 
-import java.io.*;
+import br.com.exercisesdio.exercise6.Formatacao.Files.StripTags;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Map;
 
-public class JSONFiles extends File {
+public class ParserJson {
 
-    public JSONFiles(String fileName) {
-        super(fileName);
-    }
-
-    @Override
-    public Map<String, Object> read() {
-        return Map.of();
-    }
-
-    @Override
-    public boolean write(Map<String, Object> content) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(getFullDir().toFile()))) {
-            writer.write(String.valueOf(parseJson(content)));
-            return true;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return false;
-    }
-
-    @Override
-    public boolean delete(String key) {
-        return false;
-    }
-
-    @Override
-    public String edit(Map<String, Object> content) {
-        return "";
-    }
-
-    public String parseJson(Map<String, Object> content) {
+    public static String parse(Map<String, Object> content) {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("{");
         int index = 0;
