@@ -57,7 +57,7 @@ public class JSONFiles extends File {
             index++;
         }
         stringBuilder.append("}");
-        return String.valueOf(stringBuilder);
+        return stringBuilder.toString();
     }
 
 }
